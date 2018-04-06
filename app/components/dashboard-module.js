@@ -22,12 +22,6 @@ export default Component.extend({
       }
     }
   },
-  // Send event to iframe
-  export(panoSlug) {
-    this.get('notifications').success(`Exporting module ${this.get('elementId')}`, {
-      autoClear: true
-    });
-  },
   didInsertElement() {
     this._super(...arguments);
     
@@ -39,5 +33,12 @@ export default Component.extend({
 
     // Unregister with service
     this.get('dashboard').unregister(this);
+  },
+  actions: {
+    export() {
+      this.get('notifications').success(`Exporting module ${this.get('elementId')}`, {
+        autoClear: true
+      });
+    }
   }
 });

@@ -7,7 +7,7 @@ export default Controller.extend({
   actions: {
     exportModules() {
       this.get('dashboard.selectedModules').forEach(component => {
-        component.export();
+        component.send('export');
       })
       this.get('dashboard').deselectAll();
       this.set('selectModules', false);
