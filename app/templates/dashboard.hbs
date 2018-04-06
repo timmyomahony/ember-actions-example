@@ -13,11 +13,13 @@
   </div>
   <hr>
   <div class='row'>
-    <div class='col-12'>
+    <div class='col-12 d-flex justify-content-between'>
       <button type="button" class="btn btn-primary mr-2" {{action 'toggleSelectModules'}}>Select Dashboard Modules</button>
       {{#if selectModules}}
-        <button type="button" class="btn btn-success" {{action 'exportModules'}}>Export Dashboard Modules</button>
-        <button type="button" class="btn btn-info" {{action 'toggleSelectAll'}}>{{#if dashboard.allSelected}}Deselect{{else}}Select{{/if}} All</button>
+        <div>
+          <button type="button" class="btn btn-success mr-1" {{action 'exportModules'}}>Export Dashboard Modules</button>
+          <button type="button" class="btn btn-info" {{action 'toggleSelectAll'}}>{{#if dashboard.allSelected}}Deselect{{else}}Select{{/if}} All</button>
+        </div>
       {{/if}}
     </div>
   </div>
