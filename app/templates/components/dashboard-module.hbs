@@ -1,0 +1,15 @@
+<div class="card mb-3">
+  <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p>This is a dashboard module</p>
+  </div>
+  {{#if isSelectable}}
+    <div class='card-overlay'>Click to select this module</div>
+  {{/if}}
+  {{#if isSelected}}
+    <div class='card-selected'>
+      <span class="badge badge-success">Selected</span>
+    </div>
+  {{/if}}
+</div>

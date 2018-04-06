@@ -1,0 +1,43 @@
+<div class='container'>
+  <div class='row mt-4'>
+    <div class='col-8'>
+      <h1>Sending actions down to components</h1>
+      <p>In this example, click the button below to begin selecting dashboard modules. After selecting 
+         a number of dashboard modules by clicking on them, you will be able to perform to perform an
+         action on each of these components.</p>
+    </div>
+  </div>
+  <hr>
+  <div class='row'>
+    <div class='col-12'>
+      <button type="button" class="btn btn-primary mr-2" {{action 'toggleSelectModules'}}>Select Dashboard Modules</button>
+      {{#if selectModules}}
+        <button type="button" class="btn btn-success" {{action 'exportModules'}}>Export Dashboard Modules</button>
+        <button type="button" class="btn btn-info" {{action 'toggleSelectAll'}}>{{#if dashboard.allSelected}}Deselect{{else}}Select{{/if}} All</button>
+      {{/if}}
+    </div>
+  </div>
+  <hr>
+  <div class='row'>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module One"}}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module Two"}}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module Three"}}
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module Four"}}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module Five"}}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4'>
+      {{dashboard-module isSelectable=selectModules title="Module Six"}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.card {
+  position: relative;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+}
+
+.card-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.card-selected {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
